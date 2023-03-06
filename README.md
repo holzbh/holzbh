@@ -13,7 +13,7 @@
   - [Submitty Commits by Repository](https://github.com/holzbh#submitty-commits-by-repository)
 - [Networking Experience](https://github.com/holzbh#network-experience)
 - [Jellyneo](https://github.com/holzbh#jellyneo)
-  - [JN Systems I did significant work in](https://github.com/holzbh#jn-systems-i-did-significant-work-in)
+  - [Live JN Systems I Worked On](https://github.com/holzbh#live-jn-systems-i-worked-on)
 
 ### Background and Interest
 My background is in computer networking and web design, and working with external data sources, parsing, and representation. I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
@@ -47,7 +47,7 @@ One of my largest pieces of work, which was finished by another developer was an
 ### Jellyneo
 [Jellyneo (JN)](https://www.jellyneo.net/) is a fansite for content related to Neopets. We used a homegrown CMS to handle tickets and to manage news/article content as well as a variety of searchable data. My primary responsibilities were feature development DB design (MySQL), PHP code for new hubs, JS/PHP infrastructure to support Flash-driven events that we used to run (now removed since Flash is deprecated), and integrate scraped/third party data. I was creative lead on an unrelated event at JN, "Soda Wars", project manager on several years of Negg Hunt events, and assisted in miscellaneous tasks such as comment moderation.
 
-#### JN Systems I did significant work in:
+#### Live JN Systems I Worked On
 - [Book of Ages](https://bookofages.jellyneo.net/)
   - Layout (not assets), search engine
 - [In-Depth Battlepedia](https://battlepedia.jellyneo.net/)
