@@ -1,8 +1,6 @@
-https://github.com/holzbh/holzbh/tree/main/teaching_portfolio
+__Note:__ Some assignments are still in use at RPI so I can't release solutions or sensitive configuration information publicly. These materials are usually available on request. A full list of my teaching history is available on my [RPI personal site](https://www.cs.rpi.edu/~holzbh/). Every assignment linked is one I wrote, including my own solution, test cases, and autograding as applicable.
 
-Some assignments are still in use at RPI so I can't release solutions or sensitive configuration information publicly. These materials are usually available on request. A full list of my teaching history is available on my [RPI personal site](https://www.cs.rpi.edu/~holzbh/)
-
-This portfolio contains:
+### Portfolio Contents:
 - [Toy B+ trees](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio/bplus_trees)
   - For CSCI-1200 Data Structures
   - Instructor test code (61 assertions) and autograding configuration not included
@@ -32,7 +30,10 @@ This portfolio contains:
   - TBD, Net Prog
 - [Data Structures Spring 2022 calendar](https://www.cs.rpi.edu/academics/courses/spring22/csci1200/calendar.php) contains all lectures/homework handouts from Spring 2022.
 
-A further description of the courses I've taught is as follows
-
-A full list of the courses I've taught and their primary topics covered are:
-- WIP
+### Primary Course Topics
+- CSCI-1200 [Data Structures](https://www.cs.rpi.edu/academics/courses/spring23/csci1200/): Syllabus/Course Calendar links publicly accesible. WIP
+- CSCI-2500 Computer Organization: WIP
+- CSCI-4210 Operating Systems: WIP
+- CSCI-4220 [Network Programming](https://www.cs.rpi.edu/~holzbh/NetProg21/index.php): WIP
+- CSCI-4310/6310 [Networking In the Linux Kernel](https://www.cs.rpi.edu/~holzbh/KerNet21/index.php): WIP
+- CSCI-4964 [Computer Communication Networks](https://www.cs.rpi.edu/~holzbh/CCN22/index.php): WIP
