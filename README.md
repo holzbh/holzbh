@@ -18,7 +18,7 @@ You can also see my commits across the organization's various repositories:
 - [Submitty](https://github.com/Submitty/Submitty/commits?author=holzbh), the main repository that contains our web app (PHP/Postgres) and some supporting templates/scripts (JS, Twig, Python)
 - [RainbowGrades](https://github.com/Submitty/RainbowGrades/commits?author=holzbh), our C++-based gradebook and exam seating tool
 - [InstructorTools](https://github.com/Submitty/InstructorTools/pulls?q=is%3Apr+is%3Aclosed+author%3Aholzbh), additional tools to support administering exams and scraping student data such as photos
-- [Documentation](https://github.com/Submitty/submitty.github.io/commits/main?author=holzbh), we host a separate [site]() which contains documentation on a lot of the features
+- [Documentation](https://github.com/Submitty/submitty.github.io/commits/main?author=holzbh), we host a separate [site](https://submitty.org/index/overview) which contains documentation on a lot of the features
 
 ### Network Experience
 - Cisco Systems, 2008 internship
