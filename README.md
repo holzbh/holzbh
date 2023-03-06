@@ -16,7 +16,7 @@
   - [Live JN Systems I Worked On](https://github.com/holzbh#live-jn-systems-i-worked-on)
 
 ### Background and Interest
-My background is in computer networking and web design, and working with external data sources, parsing, and representation. I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
+My background is in computer networking and web design, and working with external data sources, parsing, and representation. I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and find contributing to a project satisfying. Particularly of interest is industry that is focused on modern networking / internet services.
 
 ### Teaching
 See my [teaching portfolio](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio) for examples of assignments, lectures, and autograding. My full list of courses taught (often with a schedule of topics or syllabus) is on my [RPI personal page](https://www.cs.rpi.edu/~holzbh/).
