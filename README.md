@@ -27,6 +27,7 @@ Submitty is a web-service that is used actively at RPI for many courses, requiri
 One of my largest pieces of work, which was finished by another developer was an interface for instructors to configure automatic grade generation without needing to know technical details of the underlying JSON configuration, `customization.json`: [PR 4010](https://github.com/Submitty/Submitty/pull/4010)
 
 #### Submitty Commits By Repository
+Click a repository name to be brought directly to search results for my commits in that repository:  
 - [Submitty](https://github.com/Submitty/Submitty/commits?author=holzbh), the main repository that contains our web app (PHP/Postgres) and some supporting templates/scripts (JS, Twig, Python)
 - [RainbowGrades](https://github.com/Submitty/RainbowGrades/commits?author=holzbh), our C++-based gradebook and exam seating tool
 - [InstructorTools](https://github.com/Submitty/InstructorTools/pulls?q=is%3Apr+is%3Aclosed+author%3Aholzbh), additional tools to support administering exams and scraping student data such as photos
