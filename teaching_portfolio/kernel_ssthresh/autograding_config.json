@@ -1,0 +1,279 @@
+[
+    {
+        "title": "TCP Option",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 5,
+        "upper_clamp": 5,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 2,
+                "title": "At least one Wireshark trace provided",
+                "publish": true
+            },
+            {
+                "points": 3,
+                "title": "Trace shows option correctly on SYN and\/or SYNACK",
+                "publish": true
+            }
+        ]
+    },
+    {
+        "title": "Code",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 10,
+        "upper_clamp": 10,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Code written to attach TCP Option",
+                "publish": true
+            },
+            {
+                "points": 3,
+                "title": "Code written to parse attached TCP Option",
+                "publish": true
+            },
+            {
+                "points": 3,
+                "title": "ssthresh calculation altered correctly",
+                "publish": true
+            },
+            {
+                "points": 1,
+                "title": "Code checks for TCP Reno specifically",
+                "publish": true
+            }
+        ]
+    },
+    {
+        "title": "Testing",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 10,
+        "upper_clamp": 10,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Patch applied successfully, kernel builds",
+                "publish": true
+            },
+            {
+                "points": 5,
+                "title": "Client\/server can run without kernel crashing",
+                "publish": true
+            },
+            {
+                "points": 2,
+                "title": "Kernel logging follows specification",
+                "publish": true
+            }
+        ]
+    },
+    {
+        "title": "Conventions",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 5,
+        "upper_clamp": 5,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 5,
+                "title": "No grammar, spelling, capitalization, or punctuation errors",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Very few errors, does not affect readability",
+                "publish": false
+            },
+            {
+                "points": 0,
+                "title": "Significant quantity of errors or large errors which make reading challenging",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "Organization",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 9,
+        "upper_clamp": 9,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 5,
+                "title": "The layout of paragraphs and ideas does not harm readability and creates a logic progression",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Paragraphs or sentences are in a disjointed layout or are long and rambling, which makes it hard to connect ideas",
+                "publish": false
+            },
+            {
+                "points": 0,
+                "title": "Paragraphs are sparingly used, sentences are extremely long and\/or very fragmented. Submission appears to not be intended as formal\/technical writing.",
+                "publish": false
+            },
+            {
+                "points": 4,
+                "title": "Results presented in a readable format (table\/graphic\/etc.) or cleanly summarized",
+                "publish": true
+            },
+            {
+                "points": 0,
+                "title": "No results included in report.",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "Word Choice",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 5,
+        "upper_clamp": 5,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 5,
+                "title": "Phrasing is varied and words are used correctly",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Occasional misuse of a word, or a word\/phrasing repeated twice or more in a short span.",
+                "publish": false
+            },
+            {
+                "points": 0,
+                "title": "Frequent repeated use of words or phrases, particularly to start sentences or paragraphs or in adjacent sentences.",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "Ideas & Content",
+        "ta_comment": "",
+        "student_comment": "",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 11,
+        "upper_clamp": 11,
+        "text": false,
+        "peer_component": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "No Credit",
+                "publish": false
+            },
+            {
+                "points": 5,
+                "title": "Writing conveys a point clearly and with specifics. There is good depth in the content which demonstrates understanding of the topic.",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "The points of the author are clear but there is some generalization or portions of the submission do not have sufficient support, or length is a little shorter than required.",
+                "publish": false
+            },
+            {
+                "points": 0,
+                "title": "Lack of effort is apparent through only superficial amounts of detail being present, or length is significantly less than required.",
+                "publish": false
+            },
+            {
+                "points": 3,
+                "title": "Analysis of results \/ conclusion stated.",
+                "publish": true
+            },
+            {
+                "points": 3,
+                "title": "Experiment design is clear\/repeatable, scope of testing is more than minimal",
+                "publish": true
+            },
+            {
+                "points": 0,
+                "title": "No experiments described \/ discussed.",
+                "publish": false
+            }
+        ]
+    }
+]

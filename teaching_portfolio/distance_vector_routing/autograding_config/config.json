@@ -1,0 +1,192 @@
+{
+    "assignment_message" :
+        "The homework submission area and autograding points for PA3. Please submit to only one of the parts below. You should have 11 points total (10 from program test cases), 1 from submitting a valid README.pdf to get full autograder credit.",
+
+    "part_names" : [
+        "Project in C++ file(s)",
+        "Project in Python 3.6 file(s)"
+    ],
+
+    "max_submission_size" : 1000000,
+
+	"autograding":{
+	"submission_to_validation": ["**/README.pdf"],
+	"work_to_details" : [ "**/*.json", "**/*.txt", "**/*.pdf", "*student_file.pdf" ],
+	"work_to_public" : ["**/*.pdf", "*student_file.pdf" ]
+	},
+
+    // if submission contains files in more than one part,
+    // deletes files from all but first non empty part
+    "one_part_only" : true,
+
+    "testcases" : [
+
+		{ 
+			"title" : "C++ README.pdf (check that you can view your PDF)",
+		    "points" : 1,
+			//"points" : 0,
+			  "use_router" : false,
+			"validation": [
+				{
+				    "actual_file": "part1/README.pdf",
+				    "deduction": 1.0,
+				    "description": "uploaded a PDF file named README.pdf",
+				    "method": "fileExists",
+				    "show_actual": "always",
+				    "show_message": "always",
+						"failure_message": "Could not find PDF file, or you submitted multiple PDF files."
+				}
+			]
+		},
+
+        // test01
+        {
+            "type" : "Compilation",
+            "title" : "-- PA3 -- C++ -- Test 1 -- compilation",
+            //"command" : "g++ -Wall -Werror -o a.out part1/*.cpp -lm",
+            //"details" : "g++ -Wall -Werror -o a.out *.cpp -lm",
+            "command" : "g++ -Wall -o a.out part1/*.cpp -lm",
+            "details" : "g++ -Wall -o a.out *.cpp -lm",
+            "executable_name" : "a.out",
+            "points" : 0
+        },
+		{
+            "title" : "-- PA3 -- C++ -- Test 2",
+			"command": "./a.out pa3_DVBook.txt pa3_DVBook_student_output.txt",
+			"details": "./a.out pa3_DVBook.txt pa3_DVBook_output.txt",
+			"points": 2,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_student_output.txt",
+				    "expected_file": "pa3_DVBook_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- C++ -- Test 3",
+			"command": "./a.out pa3_DVBook_moreoutput.txt pa3_DVBook_moreoutput_student_output.txt",
+			"details": "./a.out pa3_DVBook_moreoutput.txt pa3_DVBook_moreoutput_output.txt",
+			"points": 3,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_moreoutput_student_output.txt",
+				    "expected_file": "pa3_DVBook_moreoutput_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- C++ -- Test 4",
+			"command": "./a.out pa3_DVBook_countinf_nopoison.txt pa3_DVBook_countinf_nopoison_student_output.txt",
+			"details": "./a.out pa3_DVBook_countinf_nopoison.txt pa3_DVBook_countinf_nopoison_output.txt",
+			"points": 3,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_countinf_nopoison_student_output.txt",
+				    "expected_file": "pa3_DVBook_countinf_nopoison_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- C++ -- Test 5",
+			"command": "./a.out pa3_DVBook_countinf_poison.txt pa3_DVBook_countinf_poison_student_output.txt",
+			"details": "./a.out pa3_DVBook_countinf_poison.txt pa3_DVBook_countinf_poison_output.txt",
+			"points": 2,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_countinf_poison_student_output.txt",
+				    "expected_file": "pa3_DVBook_countinf_poison_output.txt"
+				}
+			]
+		},
+		{ 
+			"title" : "Python README.pdf (check that you can view your PDF)",
+		    "points" : 1,
+			//"points" : 0,
+			  "use_router" : false,
+			"validation": [
+				{
+				    "actual_file": "part2/README.pdf",
+				    "deduction": 1.0,
+				    "description": "uploaded a PDF file named README.pdf",
+				    "method": "fileExists",
+				    "show_actual": "always",
+				    "show_message": "always",
+						"failure_message": "Could not find PDF file, or you submitted multiple PDF files."
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- Python -- Test 2",
+			"command": "python3 part2/PA3.py pa3_DVBook.txt pa3_DVBook_student_output.txt",
+			"details": "python3 PA3.py pa3_DVBook.txt pa3_DVBook_output.txt",
+			"points": 2,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_student_output.txt",
+				    "expected_file": "pa3_DVBook_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- Python -- Test 3",
+			"command": "python3 part2/PA3.py pa3_DVBook_moreoutput.txt pa3_DVBook_moreoutput_student_output.txt",
+			"details": "python3 PA3.py pa3_DVBook_moreoutput.txt pa3_DVBook_moreoutput_output.txt",
+			"points": 3,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_moreoutput_student_output.txt",
+				    "expected_file": "pa3_DVBook_moreoutput_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- Python -- Test 4",
+			"command": "python3 part2/PA3.py pa3_DVBook_countinf_nopoison.txt pa3_DVBook_countinf_nopoison_student_output.txt",
+			"details": "python3 PA3.py pa3_DVBook_countinf_nopoison.txt pa3_DVBook_countinf_nopoison_output.txt",
+			"points": 3,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+				    "actual_file": "pa3_DVBook_countinf_nopoison_student_output.txt",
+				    "expected_file": "pa3_DVBook_countinf_nopoison_output.txt"
+				}
+			]
+		},
+		{
+            "title" : "-- PA3 -- Python -- Test 5",
+			"command": "python3 part2/PA3.py pa3_DVBook_countinf_poison.txt pa3_DVBook_countinf_poison_student_output.txt",
+			"details": "python3 PA3.py pa3_DVBook_countinf_poison.txt pa3_DVBook_countinf_poison_output.txt",
+			"points": 2,
+			//"points" : 0,
+			"validation": [
+				{
+				    "method": "myersDiffbyLineNoWhite",
+					//"method": "diff",
+					//"comparison" : "byLinebyChar",
+				    "actual_file": "pa3_DVBook_countinf_poison_student_output.txt",
+				    "expected_file": "pa3_DVBook_countinf_poison_output.txt"
+				}
+			]
+		},
+    {
+      "type" : "FileCheck",
+      "title" : "Submission Limit",
+      "points" : -10,
+      "max_submissions" : 20,
+      "penalty" : -0.5
+    }
+	]
+}

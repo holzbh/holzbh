@@ -1,0 +1,72 @@
+After BOOTSTRAP(0), k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3:
+Storing key 0 at node 0
+Before FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3:
+Found value "bananas" for key 0
+After FIND_VALUE command, k-buckets are:
+0:
+1: 1:9001 0:9000
+2:
+3:
+Serving FindKey(0) request for 8
+Storing key 3 value "carrots"
+Serving FindKey(3) request for 0
+Serving FindKey(3) request for 1
+Serving FindNode(9) request for 8
+Before FIND_NODE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 9:9004 8:9003
+Found destination id 8
+After FIND_NODE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 8:9003 9:9004
+Before FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 8:9003 9:9004
+Found value "eggplant" for key 9
+After FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 8:9003 9:9004
+Storing key 8 at node 8
+Before FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 8:9003 9:9004
+Found value "fennel" for key 8
+After FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 9:9004 8:9003
+Before FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 9:9004 8:9003
+Found value "fennel" for key 8
+After FIND_VALUE command, k-buckets are:
+0:
+1: 0:9000 1:9001
+2:
+3: 9:9004 8:9003
+Evicting quitting node 0 from bucket 1
+Evicting quitting node 1 from bucket 1
+Letting 9 know I'm quitting.
+Letting 8 know I'm quitting.
+Shut down node 3

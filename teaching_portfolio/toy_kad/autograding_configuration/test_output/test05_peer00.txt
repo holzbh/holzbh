@@ -1,0 +1,48 @@
+Serving FindNode(1) request for 1
+Serving FindNode(3) request for 3
+Serving FindNode(8) request for 8
+Serving FindNode(9) request for 9
+Storing key 0 at node 0
+Before FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Found data "apples" for key 0
+After FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Serving FindKey(0) request for 1
+Storing key 0 value "bananas"
+Serving FindKey(0) request for 3
+Serving FindNode(3) request for 9
+Before FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Found value "carrots" for key 3
+After FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Serving FindKey(3) request for 1
+Before FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Found data "bananas" for key 0
+After FIND_VALUE command, k-buckets are:
+0: 1:9001
+1: 3:9002
+2:
+3: 8:9003 9:9004
+Letting 1 know I'm quitting.
+Letting 3 know I'm quitting.
+Letting 8 know I'm quitting.
+Letting 9 know I'm quitting.
+Shut down node 0

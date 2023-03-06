@@ -1,0 +1,71 @@
+Running command ADD_ROUTER u
+Command complete
+Running command ADD_ROUTER v
+Command complete
+Running command ADD_ROUTER w
+Command complete
+Running command ADD_ROUTER x
+Command complete
+Running command ADD_ROUTER y
+Command complete
+Running command ADD_ROUTER z
+Command complete
+Running command ADD_EDGE u v
+Command complete
+Running command ADD_EDGE u w
+Command complete
+Running command ADD_EDGE u x
+Command complete
+Running command ADD_EDGE v w
+Command complete
+Running command ADD_EDGE v x
+Command complete
+Running command ADD_EDGE w z
+Command complete
+Running command ADD_EDGE w y
+Command complete
+Running command ADD_EDGE w x
+Command complete
+Running command ADD_EDGE x y
+Command complete
+Running command ADD_EDGE y z
+Command complete
+Running command INITIALIZATION_DONE
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (3,y)	    (1,u)	    (2,x)	    (4,y)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (3,x)	    (5,y)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (3,x)	    (3,w)	    (0,w)	    (2,y)	    (1,w)	    (3,y)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (2,y)	    (0,x)	    (1,x)	    (3,y)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,x)	    (3,x)	    (1,y)	    (1,y)	    (0,y)	    (2,y)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (4,x)	    (5,x)	    (3,y)	    (3,y)	    (2,z)	    (0,z)	
+Command complete
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (3,y)	    (1,u)	    (2,x)	    (4,y)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (3,x)	    (5,y)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (3,x)	    (3,w)	    (0,w)	    (2,y)	    (1,w)	    (3,y)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (2,y)	    (0,x)	    (1,x)	    (3,y)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,x)	    (3,x)	    (1,y)	    (1,y)	    (0,y)	    (2,y)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (4,x)	    (5,x)	    (3,y)	    (3,y)	    (2,z)	    (0,z)	
+Total messages sent: 0

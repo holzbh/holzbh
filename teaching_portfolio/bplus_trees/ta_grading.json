@@ -1,0 +1,146 @@
+[
+    {
+        "title": "COMPLETED README",
+        "ta_comment": "",
+        "student_comment": "Name, collaborators, & hours filled in. \"TESTING & DEBUGGING STRATEGY\" section is not required.\r\n",
+        "lower_clamp": 0,
+        "default": 2,
+        "max_value": 2,
+        "upper_clamp": 2,
+        "text": false,
+        "peer": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "Full Credit ",
+                "publish": false
+            },
+            {
+                "points": -1,
+                "title": "Missing one of name, collaborators, or hours                                  ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Missing two or all of name, collaborators, or hours                                  ",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "OVERALL IMPLEMENTATION AND CODING STYLE ",
+        "ta_comment": "",
+        "student_comment": "Good use of comments, variable names, and readable structure. Proper use of private\/public, and good class organization. Also described in  https:\/\/www.cs.rpi.edu\/academics\/courses\/spring18\/csci1200\/hw_grading_criteria.php.",
+        "lower_clamp": 0,
+        "default": 10,
+        "max_value": 10,
+        "upper_clamp": 10,
+        "text": false,
+        "peer": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "Full Credit ",
+                "publish": false
+            },
+            {
+                "points": -3,
+                "title": "Sparsely commented or uncommented functions                                  ",
+                "publish": false
+            },
+            {
+                "points": -1,
+                "title": "Overly long lines                                  ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Poorly named variables or functions                                  ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Large amounts of commented out code or unnecessary whitespace                       ",
+                "publish": false
+            },
+            {
+                "points": -1,
+                "title": "Poor indentation or brace structure                                 ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Misuse of public/private                                  ",
+                "publish": false
+            },
+            {
+                "points": -1,
+                "title": "Too little whitespace",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "B  TREE IMPLEMENTATION",
+        "ta_comment": "",
+        "student_comment": "BPlusTree representation and functions are reasonable. BPlusTree only needs to track what b is and what the root is for this assignment.",
+        "lower_clamp": 0,
+        "default": 3,
+        "max_value": 3,
+        "upper_clamp": 3,
+        "text": false,
+        "peer": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "Full Credit ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Bad representation: more member variables than necessary (size is ok)                                  ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Bad or unnecessary functions (e.g. get_root())                 ",
+                "publish": false
+            },
+            {
+                "points": -2,
+                "title": "Incomplete B%2B Tree Implementation (e.g. failed to implement find or insert)",
+                "publish": false
+            }
+        ]
+    },
+    {
+        "title": "Extra Credit",
+        "ta_comment": "Up to 2 points of extra credit.",
+        "student_comment": "print_BFS_pretty implemented and the output looks nice, and is a correct vertical BFS display. Up to 2 points of extra credit.",
+        "lower_clamp": 0,
+        "default": 0,
+        "max_value": 0,
+        "upper_clamp": 2,
+        "text": false,
+        "peer": false,
+        "page": 0,
+        "is_itempool_linked": false,
+        "itempool": "",
+        "marks": [
+            {
+                "points": 0,
+                "title": "",
+                "publish": false
+            }
+        ]
+    }
+]

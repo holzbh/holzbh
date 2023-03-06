@@ -1,0 +1,29 @@
+After BOOTSTRAP(0), k-buckets are:
+0: 8:9003
+1:
+2:
+3: 0:9000 1:9001
+Before FIND_NODE command, k-buckets are:
+0: 8:9003
+1:
+2:
+3: 0:9000 1:9001
+Found destination id 3
+After FIND_NODE command, k-buckets are:
+0: 8:9003
+1:
+2:
+3: 3:9002 1:9001
+Storing key 3 at node 3
+Storing key 9 at node 9
+Serving FindKey(3) request for 1
+Serving FindKey(9) request for 8
+Storing key 9 value "eggplant"
+Serving FindKey(9) request for 1
+Serving FindNode(8) request for 3
+Serving FindKey(9) request for 3
+No record of quitting node 0 in k-buckets.
+Evicting quitting node 1 from bucket 3
+Evicting quitting node 3 from bucket 3
+Evicting quitting node 8 from bucket 0
+Shut down node 9

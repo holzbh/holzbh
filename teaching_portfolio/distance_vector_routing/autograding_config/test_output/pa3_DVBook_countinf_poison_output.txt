@@ -1,0 +1,105 @@
+Running command ADD_ROUTER x
+Command complete
+Running command ADD_ROUTER y
+Command complete
+Running command ADD_ROUTER z
+Command complete
+Running command ADD_EDGE x y
+Command complete
+Running command ADD_EDGE x z
+Command complete
+Running command ADD_EDGE y z
+Command complete
+Running command INITIALIZATION_DONE
+Message sent: (x,y)
+Message sent: (x,z)
+Message sent: (y,x)
+Message sent: (y,z)
+Message sent: (z,x)
+Message sent: (z,y)
+Message sent: (x,y)
+Message sent: (x,z)
+DV Table for x
+                   x         y         z
+         x         0         4         5
+         y         4         0         1
+         z         5         1         0
+DV Table for y
+                   x         y         z
+         x         0         4    999999
+         y         4         0         1
+         z    999999         1         0
+DV Table for z
+                   x         y         z
+         x         0         4         5
+         y         4         0         1
+         z         5         1         0
+Command complete
+Running command CHANGE_EDGE x y 60
+DV Table for x
+                   x         y         z
+         x         0        60         5
+         y         4         0         1
+         z         5         1         0
+DV Table for y
+                   x         y         z
+         x         0         4    999999
+         y        60         0         1
+         z    999999         1         0
+Message sent: (x,y)
+Message sent: (x,z)
+Message sent: (y,x)
+Message sent: (y,z)
+DV Table for x
+                   x         y         z
+         x         0        51        50
+         y        60         0         1
+         z         5         1         0
+DV Table for z
+                   x         y         z
+         x         0        60         5
+         y        60         0         1
+         z        50         1         0
+Message sent: (x,y)
+Message sent: (x,z)
+Message sent: (z,x)
+Message sent: (z,y)
+DV Table for y
+                   x         y         z
+         x         0        51        50
+         y        51         0         1
+         z        50         1         0
+Message sent: (y,x)
+Message sent: (y,z)
+DV Table for x
+                   x         y         z
+         x         0        51        50
+         y        51         0         1
+         z        50         1         0
+DV Table for y
+                   x         y         z
+         x         0        51        50
+         y        51         0         1
+         z        50         1         0
+DV Table for z
+                   x         y         z
+         x         0    999999        50
+         y    999999         0         1
+         z        50         1         0
+Command complete
+DV Table for x
+                   x         y         z
+         x         0        51        50
+         y        51         0         1
+         z        50         1         0
+DV Table for y
+                   x         y         z
+         x         0        51        50
+         y        51         0         1
+         z        50         1         0
+DV Table for z
+                   x         y         z
+         x         0    999999        50
+         y    999999         0         1
+         z        50         1         0
+Total messages sent: 18

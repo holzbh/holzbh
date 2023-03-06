@@ -1,0 +1,53 @@
+Running command ADD_ROUTER x
+Command complete
+Running command ADD_ROUTER y
+Command complete
+Running command ADD_ROUTER z
+Command complete
+Running command ADD_EDGE x y
+Command complete
+Running command ADD_EDGE x z
+Command complete
+Running command ADD_EDGE y z
+Command complete
+Running command INITIALIZATION_DONE
+Message sent: (x,y)
+Message sent: (x,z)
+Message sent: (y,x)
+Message sent: (y,z)
+Message sent: (z,x)
+Message sent: (z,y)
+Message sent: (x,y)
+Message sent: (x,z)
+DV Table for x
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+DV Table for y
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+DV Table for z
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+Command complete
+DV Table for x
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+DV Table for y
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+DV Table for z
+                   x         y         z
+         x         0         2         3
+         y         2         0         1
+         z         3         1         0
+Total messages sent: 8

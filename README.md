@@ -9,6 +9,9 @@
 ### Background and Interest
 My background is in computer networking and web design, but I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
 
+### Teaching
+See my [teaching portfolio](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio) for examples of assignments, lectures, and autograding. My full list of courses taught (often with a schedule of topics or syllabus) is on my [RPI personal page](https://www.cs.rpi.edu/~holzbh/).
+
 ### Submitty
 Submitty is a web-service that is used actively at RPI for many courses, requiring high uptime. Students use it to read discussion forum posts, view grades, and submit assignments (manually and/or autograded). Instructors use it to deliver course materials and grades, and to perform autograding. Graders (such as graduate TAs) use it to enter lab grades and view student submissions (including relevant autograding) and leave both numeric and text feedback. I have served in all roles, but also formally as a developer. 
 
@@ -39,7 +42,7 @@ You can also see my commits across the organization's various repositories:
 - [Book of Ages](https://bookofages.jellyneo.net/)
   - Layout (not assets), search engine
 - [In-Depth Battlepedia](https://battlepedia.jellyneo.net/)
-  - Migration of __"Neopets Battlepedia" a.k.a. IDB__'s database export when they shut down
+  - Migration of _"Neopets Battlepedia" a.k.a. IDB_'s database export when they shut down
   - Database design, search engine design
   - Front-end display and information layout
   - CMS-side staff interface for viewing and updating item information, including identifying stale data
@@ -53,7 +56,4 @@ You can also see my commits across the organization's various repositories:
   - Designed from scratch, including backend and support for themes
   - Link leads to my trophy cabinet, displaying non-default theme and mix of staff and user trophies
 
-_n.b._ There's a common confusion that this means I worked __for__ Neopets/Nickoledon Virtual World Group, which is incorrect. We did visit their office in Glendale, CA a couple times and were one of the first externally endorsed sites, but JN is an independent entity.
-
-### Teaching
-See the [teaching_portfolio](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio) subdirectory for examples of assignments, lectures, and autograding. My full list of courses taught (often with a schedule of topics or syllabus) is on my [RPI personal page](https://www.cs.rpi.edu/~holzbh/).
+_n.b._ There's a common confusion that this means I worked __for__ Neopets/Nickoledon Virtual Worlds Group, which is incorrect. We did visit their office in Glendale, CA a couple times and were one of the first externally endorsed sites, but JN is an independent entity.

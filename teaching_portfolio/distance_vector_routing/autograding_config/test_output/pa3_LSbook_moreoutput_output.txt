@@ -1,0 +1,287 @@
+Running command ADD_ROUTER u
+Command complete
+Running command ADD_ROUTER v
+Command complete
+Running command ADD_ROUTER w
+Command complete
+Running command ADD_ROUTER x
+Command complete
+Running command ADD_ROUTER y
+Command complete
+Running command ADD_ROUTER z
+Command complete
+Running command INITIALIZATION_DONE
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	    (0,v)	(999999,)	(999999,)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	    (0,w)	(999999,)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE u v
+Message sent: (u,v)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	(999999,)	(999999,)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	(999999,)	(999999,)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	    (0,w)	(999999,)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE u w
+Message sent: (u,v)
+Message sent: (u,w)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	(999999,)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (7,u)	(999999,)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,w)	    (7,u)	    (0,w)	(999999,)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE u x
+Message sent: (u,v)
+Message sent: (u,w)
+Message sent: (u,x)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	    (1,u)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (7,u)	    (3,u)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,w)	    (7,u)	    (0,w)	    (6,u)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (3,u)	    (6,u)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE v w
+Message sent: (v,u)
+Message sent: (u,w)
+Message sent: (u,x)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	    (1,u)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (3,u)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,v)	    (3,w)	    (0,w)	    (6,u)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (3,u)	    (6,u)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE v x
+Message sent: (v,u)
+Message sent: (u,w)
+Message sent: (u,x)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	    (1,u)	(999999,)	(999999,)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	(999999,)	(999999,)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,v)	    (3,w)	    (0,w)	    (5,v)	(999999,)	(999999,)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (5,v)	    (0,x)	(999999,)	(999999,)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE w z
+Message sent: (w,u)
+Message sent: (u,v)
+Message sent: (v,x)
+Message sent: (w,z)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	    (1,u)	(999999,)	   (10,w)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	(999999,)	    (8,w)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,v)	    (3,w)	    (0,w)	    (5,v)	(999999,)	    (5,w)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (5,v)	    (0,x)	(999999,)	   (10,w)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+(999999,)	(999999,)	(999999,)	(999999,)	    (0,y)	(999999,)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+   (10,v)	    (8,w)	    (5,z)	   (10,v)	(999999,)	    (0,z)	
+Command complete
+Running command ADD_EDGE w y
+Message sent: (w,u)
+Message sent: (u,v)
+Message sent: (v,x)
+Message sent: (w,y)
+Message sent: (w,z)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (5,u)	    (1,u)	    (6,w)	   (10,w)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (4,w)	    (8,w)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,v)	    (3,w)	    (0,w)	    (5,v)	    (1,w)	    (5,w)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (5,v)	    (0,x)	    (6,w)	   (10,w)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (6,v)	    (4,w)	    (1,y)	    (6,v)	    (0,y)	    (6,w)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+   (10,v)	    (8,w)	    (5,z)	   (10,v)	    (6,w)	    (0,z)	
+Command complete
+Running command ADD_EDGE w x
+Message sent: (w,u)
+Message sent: (u,v)
+Message sent: (v,x)
+Message sent: (w,y)
+Message sent: (w,z)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (4,x)	    (1,u)	    (5,w)	    (9,w)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (4,w)	    (8,w)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (4,x)	    (3,w)	    (0,w)	    (3,w)	    (1,w)	    (5,w)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (3,x)	    (0,x)	    (4,w)	    (8,w)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (5,x)	    (4,w)	    (1,y)	    (4,w)	    (0,y)	    (6,w)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (9,x)	    (8,w)	    (5,z)	    (8,w)	    (6,w)	    (0,z)	
+Command complete
+Running command ADD_EDGE x y
+Message sent: (x,u)
+Message sent: (u,v)
+Message sent: (v,w)
+Message sent: (w,y)
+Message sent: (w,z)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (3,y)	    (1,u)	    (2,x)	    (8,w)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (3,x)	    (8,w)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (3,x)	    (3,w)	    (0,w)	    (2,y)	    (1,w)	    (5,w)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (2,y)	    (0,x)	    (1,x)	    (7,w)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,x)	    (3,x)	    (1,y)	    (1,y)	    (0,y)	    (6,w)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (8,x)	    (8,w)	    (5,z)	    (7,y)	    (6,w)	    (0,z)	
+Command complete
+Running command ADD_EDGE y z
+Message sent: (y,w)
+Message sent: (w,u)
+Message sent: (u,v)
+Message sent: (v,x)
+Message sent: (w,z)
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (3,y)	    (1,u)	    (2,x)	    (4,y)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (3,x)	    (5,y)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (3,x)	    (3,w)	    (0,w)	    (2,y)	    (1,w)	    (3,y)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (2,y)	    (0,x)	    (1,x)	    (3,y)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,x)	    (3,x)	    (1,y)	    (1,y)	    (0,y)	    (2,y)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (4,x)	    (5,x)	    (3,y)	    (3,y)	    (2,z)	    (0,z)	
+Command complete
+LS Table for u
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (0,u)	    (2,u)	    (3,y)	    (1,u)	    (2,x)	    (4,y)	
+LS Table for v
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,v)	    (0,v)	    (3,v)	    (2,v)	    (3,x)	    (5,y)	
+LS Table for w
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (3,x)	    (3,w)	    (0,w)	    (2,y)	    (1,w)	    (3,y)	
+LS Table for x
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (1,x)	    (2,x)	    (2,y)	    (0,x)	    (1,x)	    (3,y)	
+LS Table for y
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (2,x)	    (3,x)	    (1,y)	    (1,y)	    (0,y)	    (2,y)	
+LS Table for z
+D(u),p(u)	D(v),p(v)	D(w),p(w)	D(x),p(x)	D(y),p(y)	D(z),p(z)	
+    (4,x)	    (5,x)	    (3,y)	    (3,y)	    (2,z)	    (0,z)	
+Total messages sent: 36

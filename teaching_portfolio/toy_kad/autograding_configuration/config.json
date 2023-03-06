@@ -1,0 +1,1311 @@
+{
+    "required_capabilities" : "intensive",
+    "autograding_method" : "docker",
+    "container_options" : {
+      "use_router" : false
+    },
+    "autograding" : {
+    "submission_to_compilation" : [ "*.py" ]
+    },
+    "resource_limits" : {
+        "RLIMIT_NPROC" : 100,
+        "RLIMIT_STACK" : 10000000,
+        "RLIMIT_DATA"  : 2000000000,
+        "RLIMIT_CPU" : 25,
+        "RLIMIT_FSIZE" : 500000000
+    },
+    "testcases" : [
+        {
+            "title" : "Store",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer01",
+                    "commands" : ["python3 -u hw3.py 1 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 15
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer01 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 5 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 5\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 5,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test01_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer01/STDOUT.txt",
+                    "expected_file" : "test01_peer01.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                }
+            ]
+        },
+        {
+            "title" : "Value Not Found",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer08",
+                    "commands" : ["python3 -u hw3.py 8 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 1 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 1\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 5\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 5\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 1\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 5,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test02_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer08/STDOUT.txt",
+                    "expected_file" : "test02_peer08.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                }
+            ]
+        },
+        {
+            "title" : "Late Join",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer08",
+                    "commands" : ["python3 -u hw3.py 8 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer11",
+                    "commands" : ["python3 -u hw3.py 11 9002 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer08 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 9 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer11"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 11 carrots\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 11\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer11"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer11"],
+                "action" : "stdin",
+                "string" : "STORE 9 bananas\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer11"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer11"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 10,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test03_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.34
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer08/STDOUT.txt",
+                    "expected_file" : "test03_peer08.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.33
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer11/STDOUT.txt",
+                    "expected_file" : "test03_peer11.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.33
+                }
+            ]
+        },
+        {
+            "title" : "LRU Test",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer08",
+                    "commands" : ["python3 -u hw3.py 8 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer09",
+                    "commands" : ["python3 -u hw3.py 9 9002 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer10",
+                    "commands" : ["python3 -u hw3.py 10 9003 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer08 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer08 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer10"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer08 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 9 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_NODE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 9 bananas\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 8 carrots\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 10 dates\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 10\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 10\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer10"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 15,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test04_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.25
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer08/STDOUT.txt",
+                    "expected_file" : "test04_peer08.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.25
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer09/STDOUT.txt",
+                    "expected_file" : "test04_peer09.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.25
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer10/STDOUT.txt",
+                    "expected_file" : "test04_peer10.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.25
+                }
+            ]
+        },
+        {
+            "title" : "Long Test",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer01",
+                    "commands" : ["python3 -u hw3.py 1 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer03",
+                    "commands" : ["python3 -u hw3.py 3 9002 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer08",
+                    "commands" : ["python3 -u hw3.py 8 9003 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer09",
+                    "commands" : ["python3 -u hw3.py 9 9004 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 0 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 0\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 0\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "STORE 0 bananas\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 0\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 0\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "FIND_NODE 3\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "STORE 3 carrots\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "STORE 9 dates\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 3\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 3\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_NODE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 0\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "STORE 9 eggplant\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "FIND_NODE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "STORE 8 fennel\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer03"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer09"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 15,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test05_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.2
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer01/STDOUT.txt",
+                    "expected_file" : "test05_peer01.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.2
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer03/STDOUT.txt",
+                    "expected_file" : "test05_peer03.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.2
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer08/STDOUT.txt",
+                    "expected_file" : "test05_peer08.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.2
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer09/STDOUT.txt",
+                    "expected_file" : "test05_peer09.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.2
+                }
+            ]
+        },
+        {
+            "title" : "General Test, Late Join",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer01",
+                    "commands" : ["python3 -u hw3.py 1 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer08",
+                    "commands" : ["python3 -u hw3.py 8 9002 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer01 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 8 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "STORE 9 bananas\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer00 9000\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "STORE 9 carrots\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 9\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 8\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 1
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer08"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 15,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test06_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.34
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer01/STDOUT.txt",
+                    "expected_file" : "test06_peer01.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.33
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer08/STDOUT.txt",
+                    "expected_file" : "test06_peer08.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.33
+                }
+            ]
+        },
+        {
+            "title" : "Intermediate Quit",
+            "containers" : [
+                {
+                    "container_name" : "peer00",
+                    "commands" : ["python3 -u hw3.py 0 9000 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                },
+                {
+                    "container_name" : "peer01",
+                    "commands" : ["python3 -u hw3.py 1 9001 2"],
+                    "container_image" : "submittyrpi/csci4220:instructor_python"
+                }
+            ],
+            "dispatcher_actions" : [
+              {
+                "action" : "delay",
+                "seconds" : 3
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "BOOTSTRAP peer01 9001\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "STORE 1 apples\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 1\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 1\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "FIND_VALUE 1\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer00"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              },
+              {
+                "action" : "delay",
+                "seconds" : 0.5
+              },
+              {
+                "containers" : ["peer01"],
+                "action" : "stdin",
+                "string" : "QUIT\n"
+              }
+            ],
+            "points" : 10,
+            "validation": [
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer00/STDOUT.txt",
+                    "expected_file" : "test07_peer00.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                },
+                {
+                    "method" : "diff",
+                    "actual_file" : "peer01/STDOUT.txt",
+                    "expected_file" : "test07_peer01.txt",
+                    "failure_message" : "ERROR: Your code did not match the expected output.",
+                    "show_message" : "on_failure",
+                    "deduction" : 0.5
+                }
+            ]
+        }
+    ]
+}
