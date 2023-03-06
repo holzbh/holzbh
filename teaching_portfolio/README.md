@@ -17,17 +17,18 @@ __Note:__ Some assignments are still in use at RPI so I can't release solutions 
   - For CSCI-4220 Network Programming
   - Slightly simplified version of Kademlia DHT with some arbitrary constraints to increase coverage in autograding
   - Uses Python/gRPC to show a modern RPC library
-  - Autograding design by graduate TA[emaicus](https://github.com/emaicus)
+  - Autograding design by graduate TA [emaicus](https://github.com/emaicus)
 - [TCP option ssthresh](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio/kernel_ssthresh)
   - For CSCI-4310/6310 Networking in the Linux Kernel
   - Exposure to TCP Options and the implementation in the kernel, including alignment assumptions
   - "Simple" problem definition, requires modifying both receiver and sender behavior in TCP
   - Uses Linux `tc qdisc` to manipulate traffic behavior for testing
   - Must use a properly formed `.diff` patch file, provide `.pcapng` traces from `tcpdump`/Wireshark
-- [Example lectures]()
-  - TBD, Kernet
-  - TBD, Kernet
-  - TBD, Net Prog
+- [Example lectures](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio/lectures)
+  - `.ppt`/`.pptx` versions have additional presenter notes in PowerPoint, may not show up in other viewers
+  - KerNet_SystemCalls: Discusses how to implement system calls and the `SYSCALL\_DEFINE` family of macros.
+  - KerNet\_tcphdr\_tcpsock: Describes the TCP header and socket structures as well as the relationship between several of the nested sockets in the network code.
+  - NetProg: Peer to Peer examples (partially sourced from Kurose and Ross 7th ed. with attribution)
 - [Data Structures Spring 2022 calendar](https://www.cs.rpi.edu/academics/courses/spring22/csci1200/calendar.php) contains all lectures/homework handouts from Spring 2022.
 
 ### Primary Course Topics
