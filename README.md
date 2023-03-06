@@ -56,7 +56,7 @@ One of my largest pieces of work, which was finished by another developer was an
   - Front-end display and information layout
   - CMS-side staff interface for viewing and updating item information, including identifying stale data
 - [Wardrobe](https://wardrobe.jellyneo.net/) 
-  - Initial scraping of public data from Neopets pet display engine
+  - Initial format analysis of and scraping tool for public data from Neopets pet display app
   - Database design and storage
   - Data persistence, ability to save/load outfits
   - Infrastructure to communicate with our [Dress a Pet](https://wardrobe.jellyneo.net/app/) Flash implementation
