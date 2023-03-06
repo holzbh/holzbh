@@ -1,7 +1,13 @@
-### About Me
-My background is in computer networking and web design, but I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
+### Basics
 
-My primary programming languages are C, C++, Javascript, Python, PHP, but I've dabbled in other languages and find it an interesting challenge to learn more when an opportunity demands it.
+- Jasmine Plum
+- she/her
+- My "go-to" tools: C, C++, Python, PHP, Javascript, MySQL/Postgres
+- Also have worked with: C#/Office interop, Docker, XML, Bash shell scripting
+- Interested in learning: Golang, Rust
+
+### Background and Interest
+My background is in computer networking and web design, but I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
 
 ### Submitty
 Submitty is a web-service that is used actively at RPI for many courses, requiring high uptime. Students use it to read discussion forum posts, view grades, and submit assignments (manually and/or autograded). Instructors use it to deliver course materials and grades, and to perform autograding. Graders (such as graduate TAs) use it to enter lab grades and view student submissions (including relevant autograding) and leave both numeric and text feedback. I have served in all roles, but also formally as a developer. 
