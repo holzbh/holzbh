@@ -1,6 +1,6 @@
 ### Basics
 
-- Jasmine Plum
+- Jasmine Apollo Plum
 - she/her
 - My "go-to" tools: C, C++, Python, PHP, Javascript, MySQL/Postgres
 - Also have worked with: C#/Office interop, Docker, XML, Bash shell scripting
