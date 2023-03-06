@@ -1,6 +1,10 @@
 __Note:__ Some assignments are still in use at RPI so I can't release solutions or sensitive configuration information publicly. These materials are usually available on request. A full list of my teaching history is available on my [RPI personal site](https://www.cs.rpi.edu/~holzbh/). Every assignment linked is one I wrote, including my own solution, test cases, and autograding as applicable.
 
-### Portfolio Contents:
+## Contents:
+- [Portfolio](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio#portfolio)
+- [Primary Course Topics](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio#primary-course-topics)
+
+### Portfolio:
 - [Toy B+ trees](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio/bplus_trees)
   - For CSCI-1200 Data Structures
   - Instructor test code (61 assertions) and autograding configuration not included

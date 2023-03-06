@@ -6,6 +6,15 @@
 - Also have worked with: C#/Office interop, Docker, XML, Bash shell scripting
 - Interested in learning: Golang, Rust
 
+## Contents:
+- [Background and Interest](https://github.com/holzbh#background-and-interest)
+- [Teaching](https://github.com/holzbh#teaching)
+- [Submitty](https://github.com/holzbh#submitty)
+  - [Submitty Commits by Repository](https://github.com/holzbh#submitty-commits-by-repository)
+- [Networking Experience](https://github.com/holzbh#network-experience)
+- [Jellyneo](https://github.com/holzbh#jellyneo)
+  - [JN Systems I did significant work in](https://github.com/holzbh#jn-systems-i-did-significant-work-in)
+
 ### Background and Interest
 My background is in computer networking and web design, but I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and feeling of contribution. Particularly of interest is industry that is focused on modern networking / internet services.
 
@@ -17,13 +26,13 @@ Submitty is a web-service that is used actively at RPI for many courses, requiri
 
 One of my largest pieces of work, which was finished by another developer was an interface for instructors to configure automatic grade generation without needing to know technical details of the underlying JSON configuration, `customization.json`: [PR 4010](https://github.com/Submitty/Submitty/pull/4010)
 
-You can also see my commits across the organization's various repositories:
+#### Submitty Commits By Repository
 - [Submitty](https://github.com/Submitty/Submitty/commits?author=holzbh), the main repository that contains our web app (PHP/Postgres) and some supporting templates/scripts (JS, Twig, Python)
 - [RainbowGrades](https://github.com/Submitty/RainbowGrades/commits?author=holzbh), our C++-based gradebook and exam seating tool
 - [InstructorTools](https://github.com/Submitty/InstructorTools/pulls?q=is%3Apr+is%3Aclosed+author%3Aholzbh), additional tools to support administering exams and scraping student data such as photos
 - [Documentation](https://github.com/Submitty/submitty.github.io/commits/main?author=holzbh), we host a separate [site](https://submitty.org/index/overview) which contains documentation on a lot of the features
 
-### Network Experience
+### Networking Experience
 - Cisco Systems, 2008 internship
   - Router OS code (Cisco IOS) in C
   - Bug reproduction, fixes, and testing including configuring mid-range routers in a lab.
