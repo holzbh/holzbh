@@ -5,6 +5,7 @@
 - My "go-to" tools: C, C++, Python, PHP, Javascript, MySQL/Postgres
 - Also have worked with: C#/Office interop, Docker, XML, Bash shell scripting
 - Interested in learning: Golang, Rust
+- Example PRs [Submitty PR #4010](https://github.com/Submitty/Submitty/pull/4010) | [Rainbow Grades PR #10](https://github.com/Submitty/RainbowGrades/pull/10) | [Submitty PR #1154](https://github.com/Submitty/Submitty/pull/1154)
 
 ## Contents:
 - [Background and Interest](https://github.com/holzbh#background-and-interest)
@@ -16,7 +17,7 @@
   - [Live JN Systems I Worked On](https://github.com/holzbh#live-jn-systems-i-worked-on)
 
 ### Background and Interest
-My background is in computer networking and web design, and working with external data sources, parsing, and representation. I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer (see Cisco and Submitty below for examples), because I enjoy the challenges and find contributing to a project satisfying. Particularly of interest is industry that is focused on modern networking / internet services.
+My background is in computer networking and web design, and working with external data sources, parsing, and representation. I've been teaching at [Rensselaer Polytechnic Institute (RPI)](https://www.cs.rpi.edu/~holzbh/) for the last 6.5 years and counting. I want to get back into industry as a software developer - see Cisco and Submitty below for examples of past industry experience. My PhD means I am capable of adapting and learning systems quickly, leaving me well positioned to start development sooner on your projects. Particularly of interest is industry that is focused on modern networking / internet services.
 
 ### Teaching
 See my [teaching portfolio](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio) for examples of assignments, lectures, and autograding. My full list of courses taught (often with a schedule of topics or syllabus) is on my [RPI personal page](https://www.cs.rpi.edu/~holzbh/).
@@ -27,7 +28,7 @@ Submitty is a web-service that is used actively at RPI for many courses, requiri
 One of my largest pieces of work, which was finished by another developer was an interface for instructors to configure automatic grade generation without needing to know technical details of the underlying JSON configuration, `customization.json`: [PR 4010](https://github.com/Submitty/Submitty/pull/4010)
 
 #### Submitty Commits By Repository
-Click a repository name to be brought directly to search results for my commits in that repository:  
+Click a repository name to be brought directly to search results for __my commits__ in that repository:  
 - [Submitty](https://github.com/Submitty/Submitty/commits?author=holzbh), the main repository that contains our web app (PHP/Postgres) and some supporting templates/scripts (JS, Twig, Python)
 - [RainbowGrades](https://github.com/Submitty/RainbowGrades/commits?author=holzbh), our C++-based gradebook and exam seating tool
 - [InstructorTools](https://github.com/Submitty/InstructorTools/pulls?q=is%3Apr+is%3Aclosed+author%3Aholzbh), additional tools to support administering exams and scraping student data such as photos
