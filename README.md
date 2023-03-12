@@ -47,7 +47,7 @@ Click a repository name to be brought directly to search results for __my commit
   - See: [Slides](https://www.ietf.org/proceedings/88/slides/slides-88-nwcrg-4.pdf) | [MILCOM 2012 Proceedings](http://ieeexplore.ieee.org/document/6415694)
 
 ### Jellyneo
-[Jellyneo (JN)](https://www.jellyneo.net/) is a fansite for content related to Neopets. We used a homegrown CMS to handle tickets and to manage news/article content as well as a variety of searchable data. My primary responsibilities were feature development DB design (MySQL), PHP code for new hubs, JS/PHP infrastructure to support Flash-driven events that we used to run (now removed since Flash is deprecated), and integrate scraped/third party data. I was creative lead on an unrelated event at JN, "Soda Wars", project manager on several years of Negg Hunt events, and assisted in miscellaneous tasks such as comment moderation.
+[Jellyneo (JN)](https://www.jellyneo.net/) is a fansite for content related to Neopets. We used a homegrown CMS to handle tickets and to manage news/article content as well as a variety of searchable data. My primary responsibilities were feature development, DB design (MySQL), PHP code for new hubs, JS/PHP infrastructure to support Flash-driven events that we used to run (now removed since Flash is deprecated), and integrate scraped/third party data. I was creative lead on an unrelated event at JN, "Soda Wars", project manager on several years of Negg Hunt events, and assisted in miscellaneous tasks such as comment moderation.
 
 #### Live JN Systems I Worked On
 - [Book of Ages](https://bookofages.jellyneo.net/)

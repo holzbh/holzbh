@@ -30,7 +30,7 @@ __Note:__ Some assignments are still in use at RPI so I can't release solutions 
   - Must use a properly formed `.diff` patch file, provide `.pcapng` traces from `tcpdump`/Wireshark
 - [Example lectures](https://github.com/holzbh/holzbh/tree/main/teaching_portfolio/lectures)
   - `.pptx` versions have additional presenter notes in PowerPoint, may not show up in other viewers
-  - KerNet_SystemCalls: Discusses how to implement system calls and the `SYSCALL\_DEFINE` family of macros.
+  - KerNet_SystemCalls: Discusses how to implement system calls and the `SYSCALL_DEFINE` family of macros.
   - KerNet\_tcphdr\_tcpsock: Describes the TCP header and socket structures as well as the relationship between several of the nested sockets in the network implementation code.
   - NetProg: Peer to Peer examples (partially sourced from Kurose and Ross 7th ed. with attribution)
 - [Data Structures Spring 2022 calendar](https://www.cs.rpi.edu/academics/courses/spring22/csci1200/calendar.php) contains all lectures/homework handouts from Spring 2022.
