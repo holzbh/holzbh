@@ -3,7 +3,7 @@
 - Jasmine Apollo Plum
 - she/her
 - My "go-to" tools: C, C++, Python, PHP, Javascript, MySQL/Postgres
-- Also have worked with: C#/Office interop, Docker, XML, Bash shell scripting
+- Also have worked with: Java, C#/Office interop, Docker, XML, Bash shell scripting
 - Interested in learning: Golang, Rust
 - Example PRs [Submitty PR #4010](https://github.com/Submitty/Submitty/pull/4010) | [Rainbow Grades PR #10](https://github.com/Submitty/RainbowGrades/pull/10) | [Submitty PR #1154](https://github.com/Submitty/Submitty/pull/1154)
 
